@@ -1,0 +1,7 @@
+<% @recipe.done != "false" ? done_text = "X" : done_text = " " %>
+
+<h3><%= "[#{done_text}] " + @recipe.name %></h3>
+
+<p><%=  @recipe.description %></p>
+<p> <%= "Time: #{@recipe.time}; Difficulty: #{@recipe.difficulty}" %>
+</p>

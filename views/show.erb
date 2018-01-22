@@ -1,0 +1,12 @@
+<h3>Recipes</h3>
+
+
+<ol>
+<% COOKBOOK.all.each_with_index do |recipe, index| %>
+  <li>
+    <% recipe.done != "false" ? done_text = "X" : done_text = " " %>
+    <%= "Name:#{recipe.name} <br/> #{recipe.description}; Time: #{recipe.time}; Difficulty: #{recipe.difficulty}; Done: [#{done_text}]" %>
+  </li>
+<% end %>
+</ol>
+

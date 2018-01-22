@@ -1,16 +1,15 @@
-<p>
-  I'm in a <em>view</em>
-  <%= Time.now %>
+<h3>Recipes</h3>
 
+<p>
   <ul>
-    <% @usernames.each do |username| %>
-      <li>
-        <%= username %>
-      </li>
+    <% @recipes.each_with_index do |recipe, index| %>
+    <li>
+      <a href=<%="/recipe/#{index}"%>><%= recipe.name  %></a>
+    </li>
     <% end %>
   </ul>
-
-
-  <% test_var = "scheisse" %>
-<a href="/team/<%= test_var %>">link</a>
 </p>
+
+
+<p><a href="/edit">Edit Recipes</a></p>
+
