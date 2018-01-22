@@ -1,0 +1,16 @@
+<p>
+  I'm in a <em>view</em>
+  <%= Time.now %>
+
+  <ul>
+    <% @usernames.each do |username| %>
+      <li>
+        <%= username %>
+      </li>
+    <% end %>
+  </ul>
+
+
+  <% test_var = "scheisse" %>
+<a href="/team/<%= test_var %>">link</a>
+</p>
